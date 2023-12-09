@@ -2,5 +2,4 @@ gunicorn
 flask
 numpy
 joblib
-warnings
-protobuf
+scikit-learn==1.2.2
