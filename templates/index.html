@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model Prediction</title>
+</head>
+<body>
+    <h1>Machine Learning Model Prediction</h1>
+    <form id="featureForm" action="/predict" method="post">
+        <label for="HR">HR (BPM):</label>
+        <input type="number" name="HR" required><br>
+
+        <label for="RESP">RESP (BPM):</label>
+        <input type="number" name="RESP" required><br>
+
+        <label for="SpO2">SpO2 (%):</label>
+        <input type="number" name="SpO2" required><br>
+
+        <label for="TEMP">TEMP (°C):</label>
+        <input type="number" name="TEMP" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
